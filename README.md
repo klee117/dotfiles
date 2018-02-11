@@ -70,21 +70,21 @@ git clone https://github.com/junegunn/fzf.vim
 	
 	put the following into .tmux.config
 	
-	# use C-a, since it's on the home row and easier to hit than C-b
+	use C-a, since it's on the home row and easier to hit than C-b
 	set-option -g prefix C-f
 	unbind-key C-f
 	bind-key C-f send-prefix
 
-	# Easy config reload
+	Easy config reload
 	bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
 
-	# vi is good
+	vi is good
 	setw -g mode-keys vi
 
-	# fix escape deplay
+	fix escape deplay
 	set -s escape-time 0
 
-	# mouse behavior
+	mouse behavior
 	set -g mouse on
 
 14. TODO tmux wim navigation
