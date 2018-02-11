@@ -67,6 +67,9 @@ colorscheme PaperColor
 " Set leader shortcut to a comma ','. By default it's the backslash
 let mapleader = ","
 
+" use ag in ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Jump to next error with Ctrl-n and previous error with Ctrl-m. Close the
 " quickfix window with <leader>a
 map <C-n> :cnext<CR>
