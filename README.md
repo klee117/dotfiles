@@ -53,7 +53,7 @@ git clone https://github.com/junegunn/fzf.vim
 	./configure && make
 	sudo make install
 	cd -
-	rm -fr  
+	rm -fr /tmp/tmux
 
 11. The Silver Searcher (ag and ack.vim)
 	sudo apt install silversearcher-ag
