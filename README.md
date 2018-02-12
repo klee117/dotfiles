@@ -70,7 +70,7 @@ git clone https://github.com/junegunn/fzf.vim
 	
 	put the following into .tmux.config
 	
-	use C-a, since it's on the home row and easier to hit than C-b
+	use C-f, since it's on the home row and easier to hit than C-b
 	set-option -g prefix C-f
 	unbind-key C-f
 	bind-key C-f send-prefix
