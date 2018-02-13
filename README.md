@@ -5,6 +5,9 @@
 	sudo apt update
 	sudo apt install vim
 	(uninstall if needed) sudo apt install ppa-purge && sudo ppa-purge ppa:jonathonf/vim
+1.1 fix esckey deplay
+   in .vimrc
+   set timeoutlen=1000 ttimeoutlen=10
 
 2. install pathegon
    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
