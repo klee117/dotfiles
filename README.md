@@ -87,7 +87,7 @@ git clone https://github.com/junegunn/fzf.vim
 	mouse behavior
 	set -g mouse on
 
-14. TODO tmux wim navigation
+14. TODO tmux vim navigation
     https://github.com/christoomey/vim-tmux-navigator
 
 	
