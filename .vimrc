@@ -36,6 +36,8 @@ set nocursorcolumn              " Do not highlight column (speeds up highlightin
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 set rtp+=~/.fzf			" enable fzf
+set timeoutlen=1000             "fix esckey delay...
+set ttimeoutlen=10              " ... give it 10 ms to avoid other issue
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
