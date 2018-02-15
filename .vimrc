@@ -167,7 +167,7 @@ function! s:build_go_files()
   endif
 endfunction
 
-" tsline.vim - send text from vim buffer to tmux
+" tslime.vim - send text from vim buffer to tmux
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
