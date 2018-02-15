@@ -98,7 +98,7 @@ git clone https://github.com/junegunn/fzf.vim
 list of dotfiles changed:
 .vimrc
 .inputrc
-.bash_aliasclear
+.bash_alias
 
 15. default vim as editor for things like postgresSQL /e  
     sudo update-alternatives --config editor
