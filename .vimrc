@@ -36,8 +36,8 @@ set nocursorcolumn              " Do not highlight column (speeds up highlightin
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 set rtp+=~/.fzf			" enable fzf
-set timeoutlen=1000             "fix esckey delay...
-set ttimeoutlen=10              " ... give it 10 ms to avoid other issue
+set timeoutlen=1000		"fix esckey delay...
+set ttimeoutlen=10		" ... give it 10 ms to avoid other issue
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
@@ -166,3 +166,8 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+" tsline.vim - send text from vim buffer to tmux
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
