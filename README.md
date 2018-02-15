@@ -101,3 +101,8 @@ list of dotfiles changed:
 
 15. default vim as editor for things like postgresSQL /e  
     sudo update-alternatives --config editor
+
+16. tslime.vim for sending command between vim and tmux
+ cd .vim/bundle/
+ git clone https://github.com/jgdavey/tslime.vim
+ 
