@@ -103,6 +103,6 @@ list of dotfiles changed:
     sudo update-alternatives --config editor
 
 16. tslime.vim for sending command between vim and tmux
- cd .vim/bundle/
- git clone https://github.com/jgdavey/tslime.vim
+cd .vim/bundle/
+git clone https://github.com/jgdavey/tslime.vim
  
