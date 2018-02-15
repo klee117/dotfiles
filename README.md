@@ -91,9 +91,8 @@ git clone https://github.com/junegunn/fzf.vim
 	mouse behavior
 	set -g mouse on
 
-14. TODO tmux vim navigation
+14. tmux vim navigation
     https://github.com/christoomey/vim-tmux-navigator
-
 	
 list of dotfiles changed:
 .vimrc
