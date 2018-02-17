@@ -58,10 +58,6 @@ set t_Co=256
 set background=dark
 colorscheme PaperColor
 
-" let g:rehash256 = 1
-" let g:molokai_original = 1
-" colorscheme molokai
-
 """"""""""""""""""""""
 "      Mappings      "
 """"""""""""""""""""""
