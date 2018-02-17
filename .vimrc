@@ -99,6 +99,9 @@ autocmd BufEnter * silent! lcd %:p:h
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
+" vim-tmux-nagivator hack fix for ctrl-h, when in normal mode backspace/ctrl-h
+" send tmux navigate left pane.
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " vim-go
 let g:go_fmt_command = "goimports"
