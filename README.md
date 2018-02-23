@@ -86,7 +86,8 @@ git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
 ```
 
 ### tmux vim navigation
-https://github.com/christoomey/vim-tmux-navigator
+cd ~/.vim/bundle
+git clone https://github.com/christoomey/vim-tmux-navigator
 
 ### tslime.vim for sending command between vim and tmux
 ```sh
