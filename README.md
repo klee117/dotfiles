@@ -1,12 +1,14 @@
 # dotfiles
-list of dotfiles:
-.vimrc
-.inputrc
-.bash_alias
-.profile 
 
-upgrade to vim 8
+### list of bash dotfiles to change:
+- inputrc
+- bash_alias
+- profile 
+- vimrc
+- tmux.config
 
+
+### pgrade to vim 8
 ```sh
 sudo add-apt-repository ppa:jonathonf/vim 
 sudo apt update
@@ -14,19 +16,17 @@ sudo apt install vim
 (uninstall if needed) sudo apt install ppa-purge && sudo ppa-purge ppa:jonathonf/vim
 ```
 
-fix esckey deplay
+### fix esckey deplay
 in .vimrc
 set timeoutlen=1000 ttimeoutlen=10
 
-install pathegon
-
+### install pathegon
 ```sh
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-install fzf
-
+### install fzf
 ```sh
 it clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -34,46 +34,33 @@ cd ~/.vim/bundle
 git clone https://github.com/junegunn/fzf.vim
 ```
 
-copy vim colors file
-
+### copy vim colors file
 ```sh
 git clone https://github.com/NLKNguyen/papercolor-theme
 cp papercolor-theme/colors/PaperColor.vim .vim/colors/
 ```
 
-copy .vimrc file
-
-```sh
-git clone https://github.com/klee117/dotfiles
-cp dotfiles/.vimrc .
-```
-
-lightline (vim status bar)
-
+### lightline (vim status bar)
 ```sh
 git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 ```
 
-splitjoin.vim
-
+### splitjoin.vim
 ```sh
 git clone git://github.com/AndrewRadev/splitjoin.vim.git ~/.vim/bundle/splitjoin
 ```
 
-ultisnips
-
+### ultisnips
 ```sh 
 git clone https://github.com/sirver/ultisnips ~/.vim/bundle/ultisnips
 ```
 
-vim-go
-
+### vim-go
 ```sh
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 ```
 
-tmux
-
+### tmux
 ```sh
 sudo apt update
 sudo apt install -y git
@@ -92,17 +79,16 @@ cd -
 rm -fr /tmp/tmux
 ```
 
-The Silver Searcher (ag and ack.vim)
+### The Silver Searcher (ag and ack.vim)
 ```sh
 sudo apt install silversearcher-ag
 git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
 ```
 
-tmux vim navigation
+### tmux vim navigation
 https://github.com/christoomey/vim-tmux-navigator
 
-tslime.vim for sending command between vim and tmux
-
+### tslime.vim for sending command between vim and tmux
 ```sh
 cd .vim/bundle/
 git clone https://github.com/jgdavey/tslime.vim
