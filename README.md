@@ -8,7 +8,7 @@
 - tmux.config
 
 
-### pgrade to vim 8
+### upgrade to vim 8
 ```sh
 sudo add-apt-repository ppa:jonathonf/vim 
 sudo apt update
