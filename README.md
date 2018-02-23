@@ -28,7 +28,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 ### install fzf
 ```sh
-it clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 cd ~/.vim/bundle
 git clone https://github.com/junegunn/fzf.vim
