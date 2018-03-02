@@ -98,6 +98,6 @@ git clone https://github.com/christoomey/vim-tmux-navigator
 
 ### tslime.vim for sending command between vim and tmux
 ```sh
-cd .vim/bundle && \
+cd ~/.vim/bundle && \
 git clone https://github.com/jgdavey/tslime.vim
 ```
