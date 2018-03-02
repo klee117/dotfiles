@@ -38,7 +38,7 @@ git clone https://github.com/junegunn/fzf.vim
 ### copy vim colors file
 ```sh
 mkdir .vim/colors/ && \
-git clone https://github.com/NLKNguyen/papercolor-theme .vim/colors/
+git clone https://github.com/NLKNguyen/papercolor-theme.vim/colors/
 ```
 
 ### lightline (vim status bar)
