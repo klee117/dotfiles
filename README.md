@@ -10,9 +10,10 @@
 
 ### upgrade to vim 8
 ```sh
-sudo add-apt-repository ppa:jonathonf/vim 
-sudo apt update
+sudo add-apt-repository ppa:jonathonf/vim && \
+sudo apt update && \
 sudo apt install vim
+
 (uninstall if needed) sudo apt install ppa-purge && sudo ppa-purge ppa:jonathonf/vim
 ```
 
@@ -62,16 +63,18 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 
 ### tmux
 ```sh
-sudo apt update
-sudo apt install -y git
-sudo apt install -y automake
-sudo apt install -y build-essential
-sudo apt install -y pkg-config
-sudo apt install -y libevent-dev
+sudo apt update && \
+sudo apt install -y git && \
+sudo apt install -y automake && \
+sudo apt install -y build-essential && \
+sudo apt install -y pkg-config && \
+sudo apt install -y libevent-dev && \
 sudo apt install -y libncurses5-dev
-mkdir /tmp/tmux
-git clone https://github.com/tmux/tmux.git /tmp/tmux
+
+mkdir /tmp/tmux && \
+git clone https://github.com/tmux/tmux.git /tmp/tmux  && \
 cd /tmp/tmux
+
 sh autogen.sh
 ./configure && make
 sudo make install
