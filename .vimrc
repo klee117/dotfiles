@@ -94,7 +94,6 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Auto toggle line number/relative line number depending on mode
 :set number relativenumber
-
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
