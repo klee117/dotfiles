@@ -38,7 +38,7 @@ set lazyredraw                  " Wait to redraw
 set rtp+=~/.fzf			" enable fzf
 set timeoutlen=1000		"fix esckey delay...
 set ttimeoutlen=10		" ... give it 10 ms to avoid other issue
-
+set nohls			"turn off search highlight by default
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 if has('unnamedplus')
