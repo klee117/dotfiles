@@ -35,10 +35,13 @@ set pumheight=10                " Completion window max size
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
-set rtp+=~/.fzf			" enable fzf
-set timeoutlen=1000		"fix esckey delay...
-set ttimeoutlen=10		" ... give it 10 ms to avoid other issue
-set nohls			"turn off search highlight by default
+set rtp+=~/.fzf			        " enable fzf
+set timeoutlen=1000		        " fix esckey delay...
+set ttimeoutlen=10		        " ... give it 10 ms to avoid other issue
+set nohls			            " turn off search highlight by default
+set tabstop=4 shiftwidth=4 	    " set tab to 4 spaces...
+set expandtab			        " ... convert tabs to spaces
+
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 if has('unnamedplus')
@@ -173,7 +176,6 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
 
 " tslime.vim - send text from vim buffer to tmux
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
