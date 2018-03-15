@@ -39,7 +39,7 @@ git clone https://github.com/junegunn/fzf.vim
 ```sh
 mkdir -p .vim/colors/ && \
 git clone https://github.com/NLKNguyen/papercolor-theme ~/papercolor-theme && \
-cp ~/papercolor-theme/colors/PaperColor.vim .vim/colors  && \
+cp ~/papercolor-theme/colors/PaperColor.vim ~/.vim/colors  && \
 rm -rf ~/papercolor-theme/
 ```
 
