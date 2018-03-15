@@ -75,12 +75,10 @@ sudo apt install -y libncurses5-dev
 
 mkdir /tmp/tmux && \
 git clone https://github.com/tmux/tmux.git /tmp/tmux  && \
-cd /tmp/tmux
-
-sh autogen.sh
-./configure && make
-sudo make install
-
+cd /tmp/tmux && \
+sh autogen.sh && \
+./configure && make && \
+sudo make install && \
 rm -fr /tmp/tmux
 ```
 
