@@ -37,10 +37,10 @@ git clone https://github.com/junegunn/fzf.vim
 
 ### copy vim colors file
 ```sh
-mkdir .vim/colors/ && \
-git clone https://github.com/NLKNguyen/papercolor-theme && \
-cp papercolor-theme/colors/PaperColor.vim .vim/colors  && \
-rm -rf papercolor-theme
+mkdir -p .vim/colors/ && \
+git clone https://github.com/NLKNguyen/papercolor-theme ~/papercolor-theme && \
+cp ~/papercolor-theme/colors/PaperColor.vim ~/.vim/colors  && \
+rm -rf ~/papercolor-theme/
 ```
 
 ### lightline (vim status bar)
@@ -75,12 +75,11 @@ sudo apt install -y libncurses5-dev
 
 mkdir /tmp/tmux && \
 git clone https://github.com/tmux/tmux.git /tmp/tmux  && \
-cd /tmp/tmux
-
-sh autogen.sh
-./configure && make
-sudo make install
-
+cd /tmp/tmux && \
+sh autogen.sh && \
+./configure && make && \
+sudo make install && \
+cd ~/ && \
 rm -fr /tmp/tmux
 ```
 
@@ -100,4 +99,14 @@ git clone https://github.com/christoomey/vim-tmux-navigator
 ```sh
 cd ~/.vim/bundle && \
 git clone https://github.com/jgdavey/tslime.vim
+```
+### auto completing parenthesis and brackets
+```sh
+cd ~/.vim/bundle && \
+git clone https://github.com/jiangmiao/auto-pairs
+```
+### fxing vim8 help tags (:help some_plugins doesn't work without this)
+```sh
+sudo vim
+:helptags ALL
 ```
