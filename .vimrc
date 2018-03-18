@@ -106,6 +106,9 @@ autocmd BufEnter * silent! lcd %:p:h
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
+" python-mode use python3 sytax checking
+let g:pymode_python = 'python3'
+
 " vim-tmux-nagivator hack fix for ctrl-h, when in normal mode backspace/ctrl-h
 " send tmux navigate left pane.
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
