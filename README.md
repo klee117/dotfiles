@@ -105,3 +105,6 @@ git clone https://github.com/jgdavey/tslime.vim
 cd ~/.vim/bundle && \
 git clone https://github.com/jiangmiao/auto-pairs
 ```
+### fxing vim8 help tags (:help some_plugins doesn't work without this)
+sudo vim
+:helptags ALL
