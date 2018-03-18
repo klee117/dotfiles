@@ -106,5 +106,7 @@ cd ~/.vim/bundle && \
 git clone https://github.com/jiangmiao/auto-pairs
 ```
 ### fxing vim8 help tags (:help some_plugins doesn't work without this)
+```sh
 sudo vim
 :helptags ALL
+```
