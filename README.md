@@ -107,10 +107,12 @@ git clone https://github.com/jiangmiao/auto-pairs
 ```
 
 ### python plugins
+```sh
 cd ~/.vim/pack/plugins/start && \
 git clone https://github.com/python-mode/python-mode.git && \
 cd ~/.vim/pack/plugins/start/python-mode && \
 git submodule update --init --recursive
+```
 
 ### fxing vim8 help tags (:help some_plugins doesn't work without this)
 ```sh
