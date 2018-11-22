@@ -35,12 +35,9 @@ cd ~/.vim/bundle && \
 git clone https://github.com/junegunn/fzf.vim
 ```
 
-### copy vim colors file
+### gruvbox colorscheme
 ```sh
-mkdir -p .vim/colors/ && \
-git clone https://github.com/NLKNguyen/papercolor-theme ~/papercolor-theme && \
-cp ~/papercolor-theme/colors/PaperColor.vim ~/.vim/colors/  && \
-rm -rf ~/papercolor-theme/
+git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
 ```
 
 ### lightline (vim status bar)
