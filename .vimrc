@@ -192,3 +192,6 @@ while c <= 'z'
   exec "imap \e".c." <A-".c.">"
   let c = nr2char(1+char2nr(c))
 endw
+
+" vim auto-pair fly mode
+let g:AutoPairsFlyMode=1
