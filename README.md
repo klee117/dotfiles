@@ -16,6 +16,8 @@ sudo apt install vim
 
 (uninstall if needed) sudo apt install ppa-purge && sudo ppa-purge ppa:jonathonf/vim
 ```
+### set system editor to vim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 100
 
 ### fix esckey deplay
 in .vimrc
