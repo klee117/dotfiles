@@ -52,7 +52,7 @@ git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 git clone git://github.com/AndrewRadev/splitjoin.vim.git ~/.vim/bundle/splitjoin
 ```
 
-### ultisnips
+### ultisnips (DO NOT install, doesn't work with rsp2)
 ```sh 
 git clone https://github.com/sirver/ultisnips ~/.vim/bundle/ultisnips
 ```
