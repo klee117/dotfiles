@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Usage: tmux-profile <profile> [session-name]
+set -euo pipefail
+
+profile="${1:-3claw}"
+session="${2:-$profile}"
+
+# If the session already exists, just attach/switch to it.
+if tmux has-session -t "$session" 2>/dev/null; then
+  if [ -n "${TMUX:-}" ]; then
+    exec tmux switch-client -t "$session"
+  else
+    exec tmux attach -t "$session"
+  fi
+fi
+
+case "$profile" in
+  3claw)
+    # window 0: plain shell
+    tmux new-session -d -s "$session" -n main
+    # window 1: claude on sonnet (latest)
+    tmux new-window -t "$session:1" -n claw-normal  'claude --model claude-sonnet-4-6'
+    # window 2: claude on opus (latest)
+    tmux new-window -t "$session:2" -n claw-complex 'claude --model claude-opus-4-8'
+    # window 3: claude on haiku (latest)
+    tmux new-window -t "$session:3" -n claw-quick   'claude --model claude-haiku-4-5-20251001'
+    # window 4: htop
+    tmux new-window -t "$session:4" -n htop 'htop'
+    # land on window 0
+    tmux select-window -t "$session:0"
+    ;;
+  *)
+    echo "unknown profile: $profile" >&2
+    exit 1
+    ;;
+esac
+
+# Attach (or switch if already inside tmux)
+if [ -n "${TMUX:-}" ]; then
+  exec tmux switch-client -t "$session"
+else
+  exec tmux attach -t "$session"
+fi
