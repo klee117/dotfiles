@@ -21,6 +21,12 @@ less.
 4. Two phases: **Phase A — Windows host (human/PowerShell)** then **Phase B —
    inside WSL (agent-runnable)**.
 
+> **Already on this machine and just want to *change* the env (not rebuild)?**
+> Use the **`/env-config`** slash command or spawn the **`env-config`** subagent
+> (both in `~/.claude/`, tracked in the dotfiles repo). They pre-load this kit
+> plus the known-pitfalls list so a session starts already knowing the
+> environment — e.g. it won't reach for usbipd again.
+
 ## Machine baseline (what "done" looks like)
 
 | | |
