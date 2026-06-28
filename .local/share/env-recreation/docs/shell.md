@@ -54,7 +54,9 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
   tmux panes, fzf-aware).
 - **WSL2 clipboard:** copy-mode yank pipes to `clip.exe`.
 - **TPM** plugin manager at `~/.tmux/plugins/tpm`; plugins: **tmux-resurrect** +
-  **tmux-continuum** (session save/restore). On a fresh machine:
+  **tmux-continuum** (session save/restore) + **tmux-cpu** (status bar CPU/RAM).
+  Status right shows `CPU:#{cpu_percentage} RAM:#{ram_percentage} | %H:%M %d-%b`.
+  On a fresh machine:
   ```bash
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   tmux            # then press  C-a  then  I   to install plugins
