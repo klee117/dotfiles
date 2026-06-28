@@ -105,11 +105,10 @@ Follow **`docs/shell.md`**. Summary:
   `.tmux.conf`/`init.vim`/`cheatsheet.md`/`tmux-profile`):
   ```bash
   # copy dotfiles-install.sh over first (it predates the repo), then:
-  ./dotfiles-install.sh <git-remote-url-of-dotfiles>
+  ./dotfiles-install.sh git@github-personal:klee117/dotfiles.git
   ```
-  (Reference scripts live at `~/projects/dotfiles/`. **The dotfiles remote may
-  not exist yet** — see `[[todo-dotfiles-backup]]`; until pushed, restore from a
-  local copy of `~/.dotfiles` instead.)
+  (Reference scripts live at `~/projects/dotfiles/`. SSH key `id_ed25519_personal`
+  must exist and be registered on GitHub before this works — see `docs/shell.md`.)
 - **tmux**: clone TPM (`~/.tmux/plugins/tpm`), open tmux, `prefix + I` to install
   plugins (tmux-resurrect, tmux-continuum). Prefix is **`C-a`**.
 
@@ -144,8 +143,7 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME status   # dotfiles tracked
 
 ## Gaps — verify on rebuild, trusted less
 
-- **Dotfiles remote doesn't exist yet** (`[[todo-dotfiles-backup]]`): until the
-  push happens, "restore from remote" can't run — copy `~/.dotfiles` manually.
+- **Dotfiles remote:** `git@github-personal:klee117/dotfiles.git` — live as of 2026-06-28.
 - **`~/.m2` orphaned scfx artifacts** are hand-installed and machine-local (not
   backed up anywhere) — see `docs/scfx.md`; rebuilding scfx requires re-installing
   them.

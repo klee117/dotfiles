@@ -33,6 +33,23 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 # open a new shell so the alias loads
 ```
 
+## SSH keys
+
+Two ed25519 keys in `~/.ssh/`:
+
+| File | Account |
+|---|---|
+| `id_ed25519_seabury` | klee@seaburytfx.com (work) |
+| `id_ed25519_personal` | klee117@gmail.com (personal / GitHub) |
+
+`~/.ssh/config` defines host aliases so the right key is picked automatically:
+- `seabury` → github.com with `id_ed25519_seabury`
+- `github-personal` → github.com with `id_ed25519_personal`
+
+Use `git@github-personal:klee117/...` for personal repos (including the dotfiles
+remote). `~/.ssh/config` is tracked in the dotfiles repo; the private keys are
+**not** tracked — restore by hand on a new machine.
+
 ## What `.bashrc` sets up (highlights)
 - `PATH` prepends `~/.local/bin` (so standalone `ruff` is found).
 - **nvm** init (`$NVM_DIR=~/.nvm`).
