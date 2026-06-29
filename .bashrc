@@ -136,7 +136,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # tmux 3claw profile
-alias dev='tmux-profile 3claw'
+alias 3claw='tmux-profile 3claw'
 alias fd=fdfind
 
 export EDITOR=nvim
@@ -161,7 +161,7 @@ fdo() {
 }
 
 # Weekly new-funding invoice extractor
-alias new-funding='~/projects/new-invoices/new_funding.sh'
+alias new-funding-juno='~/projects/new-invoices-juno/new_funding_juno.sh'
 
 # tldr --update is broken in 1.6.1 (tldr.sh uses JS redirect); download directly
 tldr-update() {
@@ -178,3 +178,16 @@ tldr-update() {
 
 # Bare-repo dotfiles tracker (see ~/projects/dotfiles/)
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# Limit management — invoice selloff selector
+# Usage: manage_limit <file> <month>
+# Commas between args are optional, e.g.:
+#   manage_limit Detail_Records.csv, 2026-06
+manage_limit() {
+    python3 /mnt/external/projects/limit-management/run.py \
+        --file "${1%,}" \
+        --month "${2%,}"
+}
+
+# opencode
+export PATH=/home/klee1/.opencode/bin:$PATH
