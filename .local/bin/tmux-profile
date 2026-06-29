@@ -29,6 +29,14 @@ case "$profile" in
     # land on window 0
     tmux select-window -t "$session:0"
     ;;
+  opencode)
+    # window 0: plain shell
+    tmux new-session -d -s "$session" -n main
+    # window 1: opencode on gpt-5.5
+    tmux new-window -t "$session:1" -n oc-normal 'opencode -m openai/gpt-5.5'
+    # land on window 0
+    tmux select-window -t "$session:0"
+    ;;
   *)
     echo "unknown profile: $profile" >&2
     exit 1
