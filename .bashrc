@@ -161,7 +161,7 @@ fdo() {
 }
 
 # Weekly new-funding invoice extractor
-alias new-funding-juno='~/projects/new-invoices-juno/new_funding_juno.sh'
+alias new-funding-juno='/mnt/external/projects/new-invoices-juno/new_funding_juno.sh'
 
 # tldr --update is broken in 1.6.1 (tldr.sh uses JS redirect); download directly
 tldr-update() {
