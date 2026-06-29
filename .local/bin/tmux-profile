@@ -19,11 +19,11 @@ case "$profile" in
     # window 0: plain shell
     tmux new-session -d -s "$session" -n main
     # window 1: claude on sonnet (latest)
-    tmux new-window -t "$session:1" -n claw-normal  'claude --model claude-sonnet-4-6'
+    tmux new-window -t "$session:1" -n claw-normal  'claude --model claude-sonnet-4-6 --effort medium'
     # window 2: claude on opus (latest)
-    tmux new-window -t "$session:2" -n claw-complex 'claude --model claude-opus-4-8'
+    tmux new-window -t "$session:2" -n claw-complex 'claude --model claude-opus-4-8 --effort high'
     # window 3: claude on haiku (latest)
-    tmux new-window -t "$session:3" -n claw-quick   'claude --model claude-haiku-4-5-20251001'
+    tmux new-window -t "$session:3" -n claw-quick   'claude --model claude-haiku-4-5-20251001 --effort low'
     # window 4: htop
     tmux new-window -t "$session:4" -n htop 'htop'
     # land on window 0

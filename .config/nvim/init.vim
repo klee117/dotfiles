@@ -50,6 +50,9 @@ Plug 'windwp/nvim-autopairs'
 " ── Diagnostics / references panel ────────────────────────────────────
 Plug 'folke/trouble.nvim'
 
+" ── Markdown preview ──────────────────────────────────────────────────
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install' }
+
 call plug#end()
 
 """"""""""""""""""""""
@@ -293,7 +296,15 @@ vim.lsp.config("pyright", {
   on_attach    = on_attach,
   capabilities = capabilities,
   before_init = function(params, config)
-    local root = params.rootPath or vim.fn.getcwd()
+    local raw = params.rootPath
+    local root
+    if raw == nil or raw == vim.NIL then
+      root = vim.fn.getcwd()
+    elseif type(raw) == "string" then
+      root = raw
+    else
+      root = vim.uri_to_fname(tostring(raw))
+    end
     local venv_python = root .. "/.venv/bin/python"
     if vim.fn.executable(venv_python) == 1 then
       config.settings = config.settings or {}
