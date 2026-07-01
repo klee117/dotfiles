@@ -137,7 +137,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # tmux 3claw profile
 alias 3claw='tmux-profile 3claw'
-alias oc-gpt='tmux-profile opencode'
+alias cdx='tmux-profile codex'
+alias oc='tmux-profile opencode'
 alias fd=fdfind
 
 export EDITOR=nvim

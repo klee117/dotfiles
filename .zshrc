@@ -19,3 +19,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # tmux 3claw profile
 alias dev='tmux-profile 3claw'
+alias cdx='tmux-profile codex'
