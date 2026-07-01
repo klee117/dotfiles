@@ -32,8 +32,24 @@ case "$profile" in
   opencode)
     # window 0: plain shell
     tmux new-session -d -s "$session" -n main
-    # window 1: opencode on gpt-5.5
-    tmux new-window -t "$session:1" -n oc-normal 'opencode -m openai/gpt-5.5'
+    # window 1: opencode on deepseek-v4-flash-free
+    tmux new-window -t "$session:1" -n deepseek 'opencode -m opencode/deepseek-v4-flash-free'
+    # window 2: opencode on gpt-5.5
+    tmux new-window -t "$session:2" -n openai 'opencode -m openai/gpt-5.5'
+    # window 3: opencode on gemini-3.5-flash
+    tmux new-window -t "$session:3" -n gemini 'opencode -m opencode/gemini-3.5-flash'
+    # window 4: opencode on qwen3.6-plus
+    tmux new-window -t "$session:4" -n qwen 'opencode -m opencode/qwen3.6-plus'
+    # land on window 0
+    tmux select-window -t "$session:0"
+    ;;
+  codex)
+    # window 0: plain shell
+    tmux new-session -d -s "$session" -n main
+    # window 1: codex with the configured default model
+    tmux new-window -t "$session:1" -n mini 'codex'
+    # window 2: codex on gpt-5.5
+    tmux new-window -t "$session:2" -n gpt55 'codex -m gpt-5.5'
     # land on window 0
     tmux select-window -t "$session:0"
     ;;
